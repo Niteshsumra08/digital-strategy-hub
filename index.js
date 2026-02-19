@@ -25,10 +25,12 @@ function showHome() {
 }
 
 function downloadManual(file) {
-  window.open("manuals/" + file, "_blank");
+  window.open(file, "_blank");
+
 }
 
 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("service-worker.js");
 }
+
