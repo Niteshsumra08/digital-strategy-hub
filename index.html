@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Strategy Hub</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#e60023">
+</head>
+
+<body>
+
+<!-- INSTALL SCREEN -->
+<div id="installScreen" class="screen active">
+
+  <img src="logo.png" class="logo">
+
+  <div class="app-icon">📦</div>
+
+  <h1>Digital Business<br>Strategy Hub</h1>
+
+  <p>Access your investor manuals and business guides instantly.</p>
+
+  <button id="installBtn">+ Add to Home Screen</button>
+
+  <small>Install for offline access</small>
+
+</div>
+
+
+<!-- DOWNLOAD SCREEN -->
+<div id="homeScreen" class="screen">
+
+  <h2>Downloads</h2>
+  <p class="subtitle">Select a manual to start downloading.</p>
+
+  <div class="card" onclick="downloadManual('investor-website.pdf')">
+    <div>
+      <strong>Investor Website Manual</strong>
+      <span>PDF · 2.4 MB</span>
+    </div>
+    ⬇
+  </div>
+
+  <div class="card" onclick="downloadManual('investor-app.pdf')">
+    <div>
+      <strong>Investor App Manual</strong>
+      <span>PDF · 1.8 MB</span>
+    </div>
+    ⬇
+  </div>
+
+  <div class="card" onclick="downloadManual('business-easy.pdf')">
+    <div>
+      <strong>Business Easy Manual</strong>
+      <span>PDF · 3.1 MB</span>
+    </div>
+    ⬇
+  </div>
+
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
