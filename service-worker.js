@@ -1,4 +1,4 @@
-const CACHE_NAME = "strategy-hub-v1";
+const CACHE_NAME = "strategy-hub-v2";
 
 const filesToCache = [
   "/",
@@ -30,4 +30,5 @@ const filesToCache = [
   "/manuals/investor-app.pdf",
   "/manuals/business-easy.pdf"
 ];
+
 
