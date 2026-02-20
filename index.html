@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digital Strategy Hub</title>
+
   <link rel="stylesheet" href="index.css">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#e60023">
@@ -14,7 +15,7 @@
 <!-- INSTALL SCREEN -->
 <div id="installScreen" class="screen active">
 
-  <img src="logo.png" class="logo">
+  <img src="logo.png" class="logo" alt="Company Logo">
 
   <div class="app-icon">📦</div>
 
@@ -35,28 +36,31 @@
   <h2>Downloads</h2>
   <p class="subtitle">Select a manual to start downloading.</p>
 
+  <!-- Card 1 -->
   <div class="card" onclick="downloadManual('investor-website.pdf')">
-    <div>
+    <div class="card-text">
       <strong>Investor Website Manual</strong>
       <span>PDF · 2.4 MB</span>
     </div>
-    ⬇
+    <div class="download-icon">📥</div>
   </div>
 
+  <!-- Card 2 -->
   <div class="card" onclick="downloadManual('investor-app.pdf')">
-    <div>
+    <div class="card-text">
       <strong>Investor App Manual</strong>
       <span>PDF · 1.8 MB</span>
     </div>
-    ⬇
+    <div class="download-icon">📥</div>
   </div>
 
+  <!-- Card 3 -->
   <div class="card" onclick="downloadManual('business-easy.pdf')">
-    <div>
+    <div class="card-text">
       <strong>Business Easy Manual</strong>
       <span>PDF · 3.1 MB</span>
     </div>
-    ⬇
+    <div class="download-icon">📥</div>
   </div>
 
 </div>
@@ -64,4 +68,3 @@
 <script src="index.js"></script>
 </body>
 </html>
-
