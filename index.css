@@ -1,11 +1,28 @@
+/* =========================
+   BASE LAYOUT
+========================= */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #f2f2f2;
   display: flex;
   justify-content: center;
+  animation: fadeIn 0.4s ease-in;
+
+  /* better font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* smooth fade on load */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* =========================
+   APP CONTAINER
+========================= */
 .screen {
   display: none;
   width: 100%;
@@ -21,6 +38,9 @@ body {
   display: block;
 }
 
+/* =========================
+   INSTALL SCREEN
+========================= */
 .logo {
   width: 140px;
   margin: 20px auto;
@@ -37,16 +57,21 @@ body {
   justify-content: center;
   font-size: 40px;
   margin: 20px auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
 h1 {
   margin-top: 10px;
+  line-height: 1.3;
 }
 
 p {
   color: #666;
 }
 
+/* =========================
+   BUTTON STYLE
+========================= */
 button {
   background: #e60023;
   color: white;
@@ -56,6 +81,17 @@ button {
   border-radius: 14px;
   font-size: 16px;
   margin-top: 20px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* touch feedback */
+button:active {
+  transform: scale(0.97);
+}
+
+button:hover {
+  background: #cc001f;
 }
 
 small {
@@ -64,18 +100,24 @@ small {
   color: #888;
 }
 
-/* downloads screen */
-
+/* =========================
+   DOWNLOAD SCREEN
+========================= */
 h2 {
   text-align: left;
+  margin-bottom: 5px;
 }
 
 .subtitle {
   text-align: left;
   color: #777;
   font-size: 14px;
+  margin-bottom: 10px;
 }
 
+/* =========================
+   DOWNLOAD CARDS
+========================= */
 .card {
   background: #fafafa;
   border-radius: 16px;
@@ -86,10 +128,47 @@ h2 {
   align-items: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   cursor: pointer;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+/* card press effect */
+.card:active {
+  transform: scale(0.98);
+}
+
+/* hover effect for desktop */
+.card:hover {
+  background: #f0f0f0;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+/* divider line between cards */
+.card + .card {
+  border-top: 1px solid #eee;
+}
+
+/* card text */
+.card strong {
+  display: block;
+  font-size: 15px;
 }
 
 .card span {
   display: block;
   font-size: 12px;
   color: #888;
+  margin-top: 4px;
+}
+/* right-side icon styling */
+.download-icon {
+  font-size: 20px;
+  opacity: 0.7;
+  transition: 0.2s ease;
+}
+
+/* icon animation on tap */
+.card:active .download-icon {
+  transform: scale(1.2);
+  opacity: 1;
 }
